@@ -21,7 +21,11 @@ export default function Footer() {
         </div>
       </div>
       <div className="container pb-8 text-xs text-muted-foreground text-center">
-        © {year} Shadcn Dashboard. Built with Next.js and Tailwind CSS.
+        ©
+        {' '}
+        {year}
+        {' '}
+        Shadcn Dashboard. Built with Next.js and Tailwind CSS.
       </div>
     </footer>
   );
