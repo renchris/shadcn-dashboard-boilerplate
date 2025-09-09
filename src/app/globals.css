@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
   /* Base */
@@ -34,6 +32,7 @@
 body {
   color: hsl(var(--foreground));
   background: hsl(var(--background));
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
   font-feature-settings: "rlig" 1, "calt" 1;
   font-variation-settings: normal;
 }
