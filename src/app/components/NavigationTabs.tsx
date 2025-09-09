@@ -15,7 +15,7 @@ export default function NavigationTabs() {
   const pathname = usePathname();
 
   return (
-    <ul className="flex items-center gap-2 text-sm">
+    <ul className="flex items-center gap-1.5 text-sm">
       {tabs.map((tab) => {
         const isActive = pathname === tab.href;
         return (
@@ -23,10 +23,10 @@ export default function NavigationTabs() {
             <Link
               href={tab.href}
               className={
-                `px-3 py-1.5 rounded-md transition-colors ${
+                `px-3 py-1.5 rounded-md transition-colors border border-transparent ${
                   isActive
                     ? 'bg-foreground text-background'
-                    : 'hover:bg-foreground/10 text-foreground/80'
+                    : 'text-muted-foreground hover:text-foreground hover:bg-muted hover:border-border'
                 }`
               }
             >
