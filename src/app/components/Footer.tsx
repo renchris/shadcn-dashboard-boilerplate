@@ -1,7 +1,7 @@
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="border-t border-border mt-16">
+    <footer className="border-t border-black/10 dark:border-white/10 mt-16">
       <div className="container py-10 grid gap-8 sm:grid-cols-3 text-sm">
         <div className="space-y-2">
           <div className="font-semibold">About</div>

@@ -11,7 +11,7 @@ export default function HomePage() {
         {[1, 2, 3, 4].map((cardIndex) => (
           <div
             key={cardIndex}
-            className="rounded-xl border border-border bg-card p-5 shadow-sm"
+            className="rounded-xl border border-black/10 dark:border-white/10 bg-card p-5 shadow-sm"
           >
             <div className="text-sm text-muted-foreground">
               Card

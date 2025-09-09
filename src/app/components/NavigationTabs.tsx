@@ -26,7 +26,7 @@ export default function NavigationTabs() {
                 `px-3 py-1.5 rounded-md transition-colors border border-transparent ${
                   isActive
                     ? 'bg-foreground text-background'
-                    : 'text-muted-foreground hover:text-foreground hover:bg-muted hover:border-border'
+                    : 'text-muted-foreground hover:text-foreground hover:bg-muted hover:border-black/10 dark:hover:border-white/10'
                 }`
               }
             >
