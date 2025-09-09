@@ -34,7 +34,7 @@ export default function ProfileDropdown({ user }: Props) {
       {open ? (
         <div
           role="menu"
-          className="absolute right-0 mt-2 w-48 rounded-md border border-black/10 dark:border-white/10 bg-background shadow-lg p-2 z-10"
+          className="absolute right-0 mt-2 w-48 rounded-md border border-black/10 dark:border-white/10 bg-white dark:bg-black shadow-lg p-2 z-10"
         >
           <div className="px-2 py-1 text-xs text-foreground/70">Signed in as</div>
           <div className="px-2 pb-2 text-sm">{user.email}</div>
