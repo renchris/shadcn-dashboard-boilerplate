@@ -9,6 +9,48 @@
 
 A starter template that uses the NextJS App Router, TypeScript, and Tailwind CSS.
 
+## ⚠️ Tailwind CSS v4 Breaking Changes (This repo is on v4)
+
+Tailwind v4 is CSS-first and differs from v3 in a few important ways. If you see an unstyled page, double-check these:
+
+- **Import Tailwind via CSS, not directives**
+  - In `src/app/globals.css` the first line must be:
+    ```css
+    @import "tailwindcss";
+    ```
+  - Do not use `@tailwind base; @tailwind components; @tailwind utilities;` on v4.
+
+- **PostCSS plugin**
+  - `postcss.config.cjs` must reference the new plugin:
+    ```js
+    module.exports = {
+      plugins: {
+        '@tailwindcss/postcss': {},
+      },
+    };
+    ```
+
+- **No config needed for content scanning**
+  - The `content` array in `tailwind.config.*` is not required in v4. We keep a minimal config only for optional theme tokens; Tailwind auto-detects sources.
+
+- **Avoid v3-only utilities**
+  - Classes like `bg-background`, `border-border`, etc., only work if you define them. Prefer standard utilities (e.g., `bg-black`, `text-zinc-400`, `border-black/10`).
+
+- **No responsive variants inside `@apply`**
+  - `@apply sm:px-6` will fail on v4. Use raw CSS media queries or utility classes directly in JSX.
+
+- **Globals must be imported**
+  - Ensure `src/app/layout.tsx` imports `./globals.css`.
+
+Reference: Tailwind v4 overview and migration notes — https://tailwindcss.com/blog/tailwindcss-v4
+
+## 🧩 Current Patterns
+
+- **Server-first architecture** with Next.js App Router. Layouts, pages, and most UI are Server Components; interactivity is isolated in Client Components.
+- **Design tokens** are defined as CSS variables in `globals.css` and used via standard Tailwind utilities (e.g., `text-zinc-100`, `bg-zinc-950`).
+- **Header** is a Server Component; tabs and profile dropdown are Client Components (leaf nodes) to keep client JS minimal.
+- **Styling** uses Tailwind utilities directly in JSX. Shared spacing uses a `.container` helper defined in `globals.css` with regular CSS media queries (v4-safe).
+
 ## 👍 NextJS App Router
 
 The Next.js App Router is the current standard for building applications using React's latest features.
