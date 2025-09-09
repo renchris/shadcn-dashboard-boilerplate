@@ -3,7 +3,7 @@ export default function HomePage() {
     <div>
       <section className="container py-16 text-center">
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">Shadcn Dashboard</h1>
-        <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
+        <p className="mt-4 text-zinc-500 dark:text-zinc-400 max-w-2xl mx-auto">
           A clean dashboard boilerplate using Next.js App Router
         </p>
       </section>
@@ -11,9 +11,9 @@ export default function HomePage() {
         {[1, 2, 3, 4].map((cardIndex) => (
           <div
             key={cardIndex}
-            className="rounded-xl border border-black/10 dark:border-white/10 bg-card p-5 shadow-sm"
+            className="rounded-xl border border-black/10 dark:border-white/10 bg-white/5 backdrop-blur supports-[backdrop-filter]:bg-white/5 p-5 shadow-sm"
           >
-            <div className="text-sm text-muted-foreground">
+            <div className="text-sm text-zinc-500 dark:text-zinc-400">
               Card
               {' '}
               {cardIndex}

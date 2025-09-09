@@ -5,11 +5,11 @@ export default function Footer() {
       <div className="container py-10 grid gap-8 sm:grid-cols-3 text-sm">
         <div className="space-y-2">
           <div className="font-semibold">About</div>
-          <p className="text-muted-foreground">A clean shadcn dashboard boilerplate using Next.js App Router.</p>
+          <p className="text-zinc-500 dark:text-zinc-400">A clean shadcn dashboard boilerplate using Next.js App Router.</p>
         </div>
         <div className="space-y-2">
           <div className="font-semibold">Links</div>
-          <ul className="space-y-1 text-muted-foreground">
+          <ul className="space-y-1 text-zinc-500 dark:text-zinc-400">
             <li><a href="#" className="hover:underline hover:text-foreground">Documentation</a></li>
             <li><a href="#" className="hover:underline hover:text-foreground">Changelog</a></li>
             <li><a href="#" className="hover:underline hover:text-foreground">Support</a></li>
@@ -17,10 +17,10 @@ export default function Footer() {
         </div>
         <div className="space-y-2">
           <div className="font-semibold">Newsletter</div>
-          <p className="text-muted-foreground">Subscribe for updates and news.</p>
+          <p className="text-zinc-500 dark:text-zinc-400">Subscribe for updates and news.</p>
         </div>
       </div>
-      <div className="container pb-8 text-xs text-muted-foreground text-center">
+      <div className="container pb-8 text-xs text-zinc-500 dark:text-zinc-400 text-center">
         ©
         {' '}
         {year}
