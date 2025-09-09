@@ -4,7 +4,7 @@ import UserProfile from './UserProfile';
 
 export default function TopNavigationBar() {
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-black/10 dark:border-white/10">
+    <header className="sticky top-0 z-40 w-full border-b border-white/10 bg-zinc-950/60 backdrop-blur supports-[backdrop-filter]:bg-zinc-950/60">
       <div className="container py-3 flex items-center justify-between">
         <div className="flex items-center gap-6">
           <Link href="/" className="flex items-center gap-2 text-sm font-semibold text-zinc-900 dark:text-zinc-100">
@@ -16,7 +16,7 @@ export default function TopNavigationBar() {
           </nav>
         </div>
         <div className="flex items-center gap-3">
-          <Link href="#" className="text-sm text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white">Docs</Link>
+          <Link href="#" className="text-sm text-zinc-400 hover:text-white">Docs</Link>
           <UserProfile />
         </div>
       </div>
